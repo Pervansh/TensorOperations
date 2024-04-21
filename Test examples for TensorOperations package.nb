@@ -1,0 +1,4856 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    178279,       4848]
+NotebookOptionsPosition[    155465,       4373]
+NotebookOutlinePosition[    171891,       4711]
+CellTagsIndexPosition[    171848,       4708]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\:0418\:043d\:0438\:0446\:0438\:0430\:043b\:0438\:0437\:0430\:0446\:0438\
+\:044f", "Section",
+ CellChangeTimes->{{3.9140769781864123`*^9, 3.9140769814203496`*^9}},
+ CellID->610134407,ExpressionUUID->"f577607c-632b-4da9-8586-ad6697df07a4"],
+
+Cell["\:0422\:0440\:0435\:0431\:0443\:0435\:0442\:0441\:044f \:0443\:043a\
+\:0430\:0437\:0430\:0442\:044c \:043f\:0443\:0442\:044c \:043a \:043f\:0430\
+\:043a\:0435\:0442\:0443 TensorOperations", "Text",
+ CellChangeTimes->{{3.9227134415458727`*^9, 3.92271345581551*^9}},
+ CellID->264572665,ExpressionUUID->"cf2d55eb-c065-4285-bc44-b87e5ec13572"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PackagePath", "=", "\"\<C:\\\\...\\\\TensorOperations.wl\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Get", "[", "PackagePath", "]"}]}], "Input",
+ CellChangeTimes->{{3.913654216999856*^9, 3.9136542480706363`*^9}, {
+  3.9136542887395515`*^9, 3.9136543606238537`*^9}, {3.913655218609957*^9, 
+  3.9136552244608116`*^9}, {3.9136554475079594`*^9, 3.913655462357171*^9}, {
+  3.9137125957778454`*^9, 3.9137125965661335`*^9}, {3.914073678318288*^9, 
+  3.9140736797204185`*^9}, {3.9140740684810505`*^9, 3.9140741075784025`*^9}, {
+  3.9142988636197567`*^9, 3.9142988797949796`*^9}, {3.9227133147949514`*^9, 
+  3.92271343471054*^9}},
+ CellID->16144364,ExpressionUUID->"cd3988ed-d2e9-4b75-a727-8cdcccc29b3a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TensorOperationsPalette", "[", "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.913655754118059*^9, 3.913655763999792*^9}, {
+   3.913655812321149*^9, 3.913655814200842*^9}, {3.913655850454404*^9, 
+   3.913655916288211*^9}, 3.914300206781392*^9},
+ CellLabel->"In[3]:=",
+ CellID->139226187,ExpressionUUID->"a45ed280-5a74-490d-9874-05ea590fe1b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0422\:0435\:043d\:0437\:043e\:0440\:043d\:044b\:0435 \:043e\:043f\
+\:0435\:0440\:0430\:0446\:0438\:0438", "Section",
+ CellChangeTimes->{{3.91407698960997*^9, 3.9140769930049267`*^9}},
+ CellID->690515794,ExpressionUUID->"91f79e75-6b47-4dc8-b781-8edeacf62212"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"T", "=", 
+  RowBox[{"CreateTensor", "[", 
+   RowBox[{"2", ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"CreateTensor", "[", 
+   RowBox[{"2", ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2"}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9140764012601137`*^9, 3.914076402688446*^9}},
+ CellLabel->"In[4]:=",
+ CellID->259521431,ExpressionUUID->"4573a930-623d-4605-b6aa-f1d664ca7971"],
+
+Cell[BoxData[
+ RowBox[{"TensorType", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"dim\"\>", "\[Rule]", "2"}], ",", 
+    RowBox[{"\<\"type\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "2"}], "}"}]}], ",", 
+    RowBox[{"\<\"components\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{3.914076405970845*^9, 3.914076916411419*^9, 
+  3.914143766888221*^9, 3.914143851969824*^9, 3.9141476568031673`*^9, 
+  3.914148254417675*^9, 3.9159001745779057`*^9, 3.9159013626788635`*^9},
+ CellLabel->"Out[4]=",
+ CellID->1001692811,ExpressionUUID->"be09fb66-c365-441c-be01-3a0f6c30ba20"],
+
+Cell[BoxData[
+ RowBox[{"TensorType", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"dim\"\>", "\[Rule]", "2"}], ",", 
+    RowBox[{"\<\"type\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "2"}], "}"}]}], ",", 
+    RowBox[{"\<\"components\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{3.914076405970845*^9, 3.914076916411419*^9, 
+  3.914143766888221*^9, 3.914143851969824*^9, 3.9141476568031673`*^9, 
+  3.914148254417675*^9, 3.9159001745779057`*^9, 3.915901362688837*^9},
+ CellLabel->"Out[5]=",
+ CellID->864127449,ExpressionUUID->"95fbe0cb-ae59-4c06-ba1b-013d73e4d201"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:044b\:0432\:043e\:0434 \:043a\:043e\:043c\:043f\:043e\:043d\
+\:0435\:043d\:0442 \:0442\:0435\:043d\:0437\:043e\:0440\:043e\:0432", \
+"Subsubsection",
+ CellChangeTimes->{{3.9140771928954787`*^9, 3.9140772186965637`*^9}},
+ CellID->111013305,ExpressionUUID->"6de59b92-66a3-412a-9f4a-e99722a7866d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", 
+   RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", 
+   RowBox[{"-", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"S", 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"2", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"PrintTensor", "[", "S", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"PrintComponents", "[", "S", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"T", "//", "PrintTensor"}], "\[IndentingNewLine]", 
+ RowBox[{"T", "//", "PrintComponents"}]}], "Input",
+ CellChangeTimes->{3.914077266676667*^9},
+ CellLabel->"In[17]:=",
+ CellID->69344413,ExpressionUUID->"50e7a008-9f3a-4f2e-aab0-5b67cbe27f92"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"S\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], "", "", "", "", ""},
+    {"\<\"\:041e\:0441\:0442\:0430\:043b\:044c\:043d\:044b\:0435 \:043a\:043e\
+\:043c\:043f\:043e\:043d\:0435\:043d\:0442\:044b \:0440\:0430\:0432\:043d\
+\:044b \:043d\:0443\:043b\:044e\"\>", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+     "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.914077254851141*^9, 3.914077268595251*^9}, 
+   3.914143766959611*^9, 3.914143852086937*^9, 3.9141476569015493`*^9, 
+   3.914148254532172*^9, 3.915900176714328*^9, 3.9159013680517616`*^9, 
+   3.91590140027643*^9},
+ CellLabel->"Out[24]=",
+ CellID->278277369,ExpressionUUID->"da7794f8-120d-498c-8d5a-f93d10c5efc6"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "0", "0"},
+        {"2", "0", "0"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "5", 
+         RowBox[{"-", "1"}]},
+        {"2", "3", 
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "0", "0"},
+        {"2", "0", "0"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "5", "0"},
+        {"2", "3", "3"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.914077254851141*^9, 3.914077268595251*^9}, 
+   3.914143766959611*^9, 3.914143852086937*^9, 3.9141476569015493`*^9, 
+   3.914148254532172*^9, 3.915900176714328*^9, 3.9159013680517616`*^9, 
+   3.915901400292554*^9},
+ CellLabel->"Out[25]=",
+ CellID->13056481,ExpressionUUID->"014a1687-38c3-402a-b1c3-78eb8d672f90"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"1"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], "", ""}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.914077254851141*^9, 3.914077268595251*^9}, 
+   3.914143766959611*^9, 3.914143852086937*^9, 3.9141476569015493`*^9, 
+   3.914148254532172*^9, 3.915900176714328*^9, 3.9159013680517616`*^9, 
+   3.915901400312503*^9},
+ CellLabel->"Out[26]=",
+ CellID->590064067,ExpressionUUID->"9ec04e8e-c6d7-4d86-beb1-e34045aef57e"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"T\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "1", "1"},
+        {"2", "1", "1"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"T\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "1", "1"},
+        {"2", "1", "1"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"T\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "1", "1"},
+        {"2", "1", "1"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"T\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "1", "1"},
+        {"2", "1", "1"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.914077254851141*^9, 3.914077268595251*^9}, 
+   3.914143766959611*^9, 3.914143852086937*^9, 3.9141476569015493`*^9, 
+   3.914148254532172*^9, 3.915900176714328*^9, 3.9159013680517616`*^9, 
+   3.91590140032854*^9},
+ CellLabel->"Out[27]=",
+ CellID->192610142,ExpressionUUID->"fd789b0d-931d-414f-b452-4fd39ffa6998"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:041e\:0431\:0440\:0430\:0449\:0435\:043d\:0438\:0435 \:043a \:043a\
+\:043e\:043c\:043f\:043e\:043d\:0435\:043d\:0442\:0430\:043c \:0442\:0435\
+\:043d\:0437\:043e\:0440\:0430", "Subsubsection",
+ CellChangeTimes->{{3.914077043946557*^9, 3.9140770541956177`*^9}},
+ CellID->96963342,ExpressionUUID->"15c58c1d-2d59-43c0-8cbc-8b3007dda4e4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"T", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "5"}], ";"}], "\[IndentingNewLine]", 
+ TemplateBox[{"T", 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "1"}], "}"}], 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}]},
+  "Subsuperscript"]}], "VerificationTest",
+ CellChangeTimes->{{3.9140769434139414`*^9, 3.9140769465843616`*^9}},
+ CellLabel->"In[68]:=",
+ CellID->342923698,ExpressionUUID->"3c12c377-786a-4f0e-9d71-76f7689a2311"],
+
+Cell[BoxData["5"], "ExpectedOutput",
+ CellChangeTimes->{3.914076950368083*^9},
+ CellID->7605551,ExpressionUUID->"13c71077-b71f-4ee9-b645-3e36dc02ab18"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    ImageSizeCache->{75.98902724304199, {3., 8.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              114., {10.933593799266964`, 15.066406200733036`}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    ImageSizeCache->{64.96702817001344, {3., 9.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  103., {10.933593799266964`, 15.066406200733036`}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"], {
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "MemoryConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["MemoryConstraint"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "SameTest-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["SameTest"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TestID-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TestID"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TimeConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TimeConstraint"]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                ImageSizeCache->{21.38400192260742, {1., 8.}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->4689416,ExpressionUUID->"a8bf9784-c71a-4423-b51b-e7c9a28301a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"T", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", 
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", 
+    RowBox[{"Log", "[", "y", "]"}], "-", "1"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ TemplateBox[{"T", 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "1"}], "}"}], 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}]},
+  "Subsuperscript"]}], "VerificationTest",
+ CellChangeTimes->{{3.9140769434139414`*^9, 3.9140769465843616`*^9}, {
+  3.9140770730496254`*^9, 3.914077084374995*^9}},
+ CellLabel->"In[69]:=",
+ CellID->361683162,ExpressionUUID->"78b1a9e0-4095-43b8-95b5-67ba29767ac7"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "2"], "+", 
+  RowBox[{"Log", "[", "y", "]"}], "-", "1"}]], "ExpectedOutput",
+ CellChangeTimes->{
+  3.914076950368083*^9, {3.9140771014169493`*^9, 3.914077115408722*^9}},
+ CellID->503997400,ExpressionUUID->"7aadb491-bb26-40ed-b9dc-11b6480e3e2e"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    ImageSizeCache->{75.98902724304199, {3., 8.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              114., {10.933593799266964`, 15.066406200733036`}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    ImageSizeCache->{64.96702817001344, {3., 9.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  103., {10.933593799266964`, 15.066406200733036`}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"], {
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "MemoryConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["MemoryConstraint"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "SameTest-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["SameTest"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TestID-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TestID"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TimeConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TimeConstraint"]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                ImageSizeCache->{21.38400192260742, {1., 8.}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->91448044,ExpressionUUID->"4a80b19d-e935-4cae-944b-3e8cbe35ccc3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"T", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "2"}], "}"}]},
+    "Subsuperscript"], "\[Congruent]", "5"}], ";"}], "\[IndentingNewLine]", 
+ TemplateBox[{"T", 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "1"}], "}"}], 
+   RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}]},
+  "Subsuperscript"]}], "VerificationTest",
+ CellChangeTimes->{{3.9140769434139414`*^9, 3.9140769465843616`*^9}},
+ CellLabel->"In[70]:=",
+ CellID->10330298,ExpressionUUID->"24b53dca-7c95-4c89-8d61-30a17640f7c7"],
+
+Cell[BoxData["5"], "ExpectedOutput",
+ CellChangeTimes->{3.914076950368083*^9},
+ CellID->148960539,ExpressionUUID->"11359cae-8c96-4cca-b334-ed3ebcb884c2"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    ImageSizeCache->{75.98902724304199, {3., 8.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              114., {10.933593799266964`, 15.066406200733036`}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    ImageSizeCache->{64.96702817001344, {3., 9.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  103., {10.933593799266964`, 15.066406200733036`}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"], {
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "MemoryConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["MemoryConstraint"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "SameTest-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["SameTest"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TestID-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TestID"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TimeConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TimeConstraint"]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                ImageSizeCache->{21.38400192260742, {1., 8.}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->89451041,ExpressionUUID->"29b3d527-c357-4c1e-82bd-f57f7e446e2d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0422\:0435\:043d\:0437\:043e\:0440\:043d\:043e\:0435 \:043f\:0440\
+\:043e\:0438\:0437\:0432\:0435\:0434\:0435\:043d\:0438\:0435", "Subsubsection",
+ CellChangeTimes->{{3.9140773019307566`*^9, 3.9140773254682493`*^9}},
+ CellID->683182173,ExpressionUUID->"180b6bce-40c6-44bb-bace-543e64222eaf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"T", "\[CircleTimes]", "S"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"PrintTensor", "[", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{"T", "\[CircleTimes]", "S"}], "]"}], "]"}]}], "Input",
+ CellLabel->"In[71]:=",
+ CellID->212074867,ExpressionUUID->"f33dbb22-fc79-4393-b076-bb0284fe8aa8"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"25"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "5"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"15"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "5"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"25"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"15"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"15"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "1", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "1", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"5"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "1"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], 
+     TagBox[GridBox[{
+        {
+         TemplateBox[{"\"T\"", 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}], 
+           RowBox[{"{", 
+             RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]},
+          "Subsuperscript"]},
+        {"3"}
+       },
+       AutoDelete->False,
+       GridBoxDividers->{
+        "Columns" -> {{None}}, "RowsIndexed" -> {2 -> GrayLevel[0.5]}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"], "", ""},
+    {"\<\"\:041e\:0441\:0442\:0430\:043b\:044c\:043d\:044b\:0435 \:043a\:043e\
+\:043c\:043f\:043e\:043d\:0435\:043d\:0442\:044b \:0440\:0430\:0432\:043d\
+\:044b \:043d\:0443\:043b\:044e\"\>", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+     "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.9140773308064113`*^9, 3.914143771712102*^9, 
+  3.9141438617430296`*^9, 3.9141476638792133`*^9, 3.914148258868167*^9},
+ CellLabel->"Out[72]=",
+ CellID->241714223,ExpressionUUID->"533f6c7a-6c71-4acb-af44-35cb71459323"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0421\:0432\:0435\:0440\:0442\:043a\:0430", "Subsubsection",
+ CellChangeTimes->{{3.914077846904874*^9, 3.914077848897973*^9}},
+ CellID->292939092,ExpressionUUID->"c6e17fe1-3c55-4d50-a0e2-a37b239e3670"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Convolution", "[", 
+  RowBox[{"S", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "2"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[73]:=",
+ CellID->654051119,ExpressionUUID->"c5396209-7cf8-483a-bc7d-818b46d0d64f"],
+
+Cell[BoxData[
+ RowBox[{"TensorType", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"dim\"\>", "\[Rule]", "2"}], ",", 
+    RowBox[{"\<\"type\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+    RowBox[{"\<\"components\"\>", "\[Rule]", "2"}]}], "\[RightAssociation]"}],
+   "]"}]], "Output",
+ CellChangeTimes->{3.9140778506009274`*^9, 3.9141437717722197`*^9, 
+  3.9141438618202724`*^9, 3.9141476639328327`*^9, 3.9141482589235783`*^9},
+ CellLabel->"Out[73]=",
+ CellID->433178194,ExpressionUUID->"289a6408-5427-4893-9411-21c66bb31593"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"res", "=", 
+   RowBox[{"Convolution", "[", 
+    RowBox[{"S", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "2"}], "}"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ TemplateBox[{"res", 
+   RowBox[{"{", "}"}], 
+   RowBox[{"{", "}"}]},
+  "Subsuperscript"]}], "VerificationTest",
+ CellChangeTimes->{{3.914143883100046*^9, 3.9141439431931324`*^9}},
+ CellLabel->"In[74]:=",
+ CellID->994921187,ExpressionUUID->"73649ef1-1a59-4596-a262-60567bc996b9"],
+
+Cell[BoxData["2"], "ExpectedOutput",
+ CellChangeTimes->{{3.914143950310808*^9, 3.914143952753714*^9}},
+ CellID->438540990,ExpressionUUID->"30638fb1-09d2-423d-be9e-903e10619f0a"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    ImageSizeCache->{75.98902724304199, {3., 8.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              114., {10.933593799266964`, 15.066406200733036`}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    ImageSizeCache->{64.96702817001344, {3., 9.}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  103., {10.933593799266964`, 15.066406200733036`}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"], {
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "MemoryConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["MemoryConstraint"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "SameTest-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["SameTest"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TestID-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TestID"]], 
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "MUnitStrings", "TimeConstraint-Label"]]:>
+                Block[{$ContextPath}, Needs["MUnit`"]; 
+                 MUnit`InsertOptionRule["TimeConstraint"]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                ImageSizeCache->{21.38400192260742, {1., 8.}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "MUnitExpressions", "Run"]], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"]], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->249947121,ExpressionUUID->"f2835cda-cdfd-4d83-bafd-99ab5f02a17c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ContextPath"], "Input",
+ CellChangeTimes->{{3.9141470247170525`*^9, 3.914147035721084*^9}, 
+   3.9141470709851074`*^9, 3.9141474029157686`*^9},
+ CellLabel->"In[75]:=",
+ CellID->42744346,ExpressionUUID->"a3bdf149-678c-4d81-9aac-e80cffc17377"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"TensorOperations`\"\>", 
+   ",", "\<\"CodeFormatter`Notebooks`\"\>", 
+   ",", "\<\"DocumentationSearch`\"\>", ",", "\<\"ResourceLocator`\"\>", 
+   ",", "\<\"HighlightingCompatibility`\"\>", ",", "\<\"System`\"\>", 
+   ",", "\<\"Global`\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.914147404233924*^9, 3.914147665293599*^9, 
+  3.9141482601375093`*^9},
+ CellLabel->"Out[75]=",
+ CellID->166565415,ExpressionUUID->"59fd8ad2-c912-42ef-a485-c2e96d884f1d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "Subsubsection",
+ CellChangeTimes->{{3.914147020672302*^9, 3.9141470218967695`*^9}},
+ CellID->2587333,ExpressionUUID->"de15b1c9-a026-49eb-a926-87adb36bf51e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:041a\:043e\:0432\:0430\:0440\:0438\:0430\:043d\:0442\:043d\:043e\:0435\
+ \:0434\:0438\:0444\:0444\:0435\:0440\:0435\:043d\:0446\:0438\:0440\:043e\
+\:0432\:0430\:043d\:0438\:0435", "Section",
+ CellChangeTimes->{{3.914077004697817*^9, 3.91407701164769*^9}},
+ CellID->176304986,ExpressionUUID->"752fdd3f-5098-4ab1-9e2f-74dfb2a65726"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"S", "//", "PrintComponents"}]], "Input",
+ CellChangeTimes->{{3.9159001988641095`*^9, 3.9159002029374733`*^9}},
+ CellLabel->"In[28]:=",
+ CellID->81803095,ExpressionUUID->"08f2569b-0649-40d3-b809-c401faed4fd5"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "0", "0"},
+        {"2", "0", "0"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "5", 
+         RowBox[{"-", "1"}]},
+        {"2", "3", 
+         RowBox[{"-", "1"}]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "1"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "0", "0"},
+        {"2", "0", "0"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"S\"", 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "2"}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "5", "0"},
+        {"2", "3", "3"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.915900203303091*^9, 3.915901408690028*^9},
+ CellLabel->"Out[28]=",
+ CellID->88801226,ExpressionUUID->"416f3069-0af8-4a2e-a5ed-fd92aa9644ae"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]], "0"},
+        {"0", 
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]]}
+       }], ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"CovariantD", "[", 
+  RowBox[{"S", ",", "\[CapitalGamma]", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalGamma]", "=."}]}], "Input",
+ CellChangeTimes->{{3.9099212539418793`*^9, 3.9099212583848915`*^9}, {
+  3.909921633289605*^9, 3.9099216761011815`*^9}, {3.9099217705436616`*^9, 
+  3.9099217896308775`*^9}},
+ CellLabel->"In[29]:=",
+ CellID->43986366,ExpressionUUID->"c3bd1017-c4e9-444d-8a3e-2cca2aae48b3"],
+
+Cell[BoxData[
+ RowBox[{"CreateTensor", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["3", "y"]}], ",", 
+         RowBox[{"-", 
+          FractionBox["3", "y"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox["1", "y"], ",", 
+         RowBox[{"-", 
+          FractionBox["4", "y"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["12", "y"]}], ",", 
+         RowBox[{"-", 
+          FractionBox["12", "y"]}]}], "}"}]}], "}"}]}], "}"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{
+  3.909921793239124*^9, 3.909921869940489*^9, 3.909922677477321*^9, {
+   3.9099230440612884`*^9, 3.909923056808917*^9}, 3.9125042535896473`*^9, 
+   3.9159001838145657`*^9, 3.915901411400938*^9},
+ CellLabel->"Out[30]=",
+ CellID->714541527,ExpressionUUID->"48cf2c43-9d4a-4bf3-97a1-0630d4eec24e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"1", "0"},
+        {"0", "1"}
+       }], ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"CovariantD", "[", 
+  RowBox[{"S", ",", "\[CapitalGamma]", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalGamma]", "=."}]}], "Input",
+ CellChangeTimes->{{3.9099212539418793`*^9, 3.9099212583848915`*^9}, {
+  3.909921633289605*^9, 3.9099216761011815`*^9}, {3.9099217705436616`*^9, 
+  3.9099217896308775`*^9}, {3.915900254972172*^9, 3.9159002563455267`*^9}},
+ CellLabel->"In[32]:=",
+ CellID->216482628,ExpressionUUID->"68faf10c-f311-4b9e-96a4-1af3f8b60edd"],
+
+Cell[BoxData[
+ RowBox[{"CreateTensor", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.909921793239124*^9, 3.909921869940489*^9, 3.909922677477321*^9, {
+   3.9099230440612884`*^9, 3.909923056808917*^9}, 3.9125042535896473`*^9, 
+   3.9159001838145657`*^9, 3.91590025705822*^9, 3.9159014138296657`*^9},
+ CellLabel->"Out[33]=",
+ CellID->721088919,ExpressionUUID->"61f132fd-b4f2-462c-a8d4-11b6f1b5c90d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]], "0"},
+        {"0", 
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]]}
+       }], ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[EmptyDownTriangle]", "=", 
+   RowBox[{"CovariantD", "[", 
+    RowBox[{"\[CapitalGamma]", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\[EmptyDownTriangle]", "[", "S", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalGamma]", "=."}], "\[IndentingNewLine]", 
+ RowBox[{"\[EmptyDownTriangle]", "=."}]}], "Input",
+ CellChangeTimes->{{3.9099282607203035`*^9, 3.9099282965984335`*^9}, 
+   3.915899785535917*^9},
+ CellLabel->"In[35]:=",
+ CellID->28629463,ExpressionUUID->"1ce681dc-1199-4e5f-bd7b-004c5d88535f"],
+
+Cell[BoxData[
+ RowBox[{"CreateTensor", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["3", "y"]}], ",", 
+         RowBox[{"-", 
+          FractionBox["3", "y"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox["1", "y"], ",", 
+         RowBox[{"-", 
+          FractionBox["4", "y"]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["12", "y"]}], ",", 
+         RowBox[{"-", 
+          FractionBox["12", "y"]}]}], "}"}]}], "}"}]}], "}"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{{3.909928279102684*^9, 3.9099282981676464`*^9}, 
+   3.912504253752266*^9, 3.915900194117174*^9, 3.915901416186846*^9},
+ CellLabel->"Out[37]=",
+ CellID->209738569,ExpressionUUID->"10accb0a-a90c-482f-9207-5ab05b1a56c2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"L", "=", 
+   RowBox[{"CreateTensor", "[", 
+    RowBox[{"2", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "0"}], "}"}], ",", 
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {"x", 
+         RowBox[{"x", " ", "y"}]},
+        {
+         SuperscriptBox["x", "2"], 
+         FractionBox["1", "y"]}
+       }], "\[NoBreak]", ")"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"L", "//", "PrintComponents"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"1", "0"},
+        {"0", "1"}
+       }], ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "//", "PrintComponents"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[EmptyDownTriangle]1", "=", 
+   RowBox[{"CovariantD", "[", 
+    RowBox[{"\[CapitalGamma]", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[EmptyDownTriangle]1", "[", "L", "]"}], "//", 
+   "PrintComponents"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]], "0"},
+        {"0", 
+         FractionBox["1", 
+          SuperscriptBox["y", "2"]]}
+       }], ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[EmptyDownTriangle]2", "=", 
+   RowBox[{"CovariantD", "[", 
+    RowBox[{"\[CapitalGamma]", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[EmptyDownTriangle]2", "[", "L", "]"}], "//", 
+   "PrintComponents"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalGamma]", "=", 
+   RowBox[{"CreateChristoffelSymbols", "[", "2", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"\[CapitalGamma]", 
+     RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], 
+     RowBox[{"{", "1", "}"}]},
+    "Subsuperscript"], "\[Congruent]", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[EmptyDownTriangle]2", "=", 
+   RowBox[{"CovariantD", "[", 
+    RowBox[{"\[CapitalGamma]", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[EmptyDownTriangle]2", "[", "L", "]"}], "//", 
+  "PrintComponents"}]}], "Input",
+ CellChangeTimes->{{3.915899739070959*^9, 3.9158997982925673`*^9}, {
+   3.9158998491565933`*^9, 3.91589984990895*^9}, {3.915899993758679*^9, 
+   3.915900155157253*^9}, {3.9159002346959505`*^9, 3.915900242850813*^9}, {
+   3.915901431507028*^9, 3.915901476578622*^9}, {3.9159017490147195`*^9, 
+   3.915901756664451*^9}, 3.9159027292942657`*^9, 3.915904157130779*^9, {
+   3.9159433056367817`*^9, 3.915943370464302*^9}},
+ CellID->22716878,ExpressionUUID->"3e6a0adc-fc5c-4c6f-beda-6322226aa9c7"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"L\"", 
+         RowBox[{"{", "}"}], 
+         RowBox[{"{", 
+           RowBox[{"\"i\"", ",", "\"j\""}], "}"}]}, "Subsuperscript", 
+        SyntaxForm -> SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "x", 
+         RowBox[{"x", " ", "y"}]},
+        {"2", 
+         SuperscriptBox["x", "2"], 
+         FractionBox["1", "y"]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.9159001206039753`*^9, 3.9159001566018095`*^9, 3.9159002360184183`*^9, 
+   3.9159002723488026`*^9, 3.915901335210997*^9, 3.9159014192113113`*^9, {
+   3.915901464884441*^9, 3.915901477793866*^9}, 3.9159017571596675`*^9, 
+   3.9159018175628333`*^9, 3.9159019323781195`*^9, 3.91590201226248*^9, 
+   3.9159023167485843`*^9, 3.915902420944312*^9, 3.91590252116628*^9, 
+   3.9159025724569244`*^9, 3.9159026141844807`*^9, {3.9159027030531864`*^9, 
+   3.9159027297940607`*^9}, 3.9159041594224796`*^9},
+ CellLabel->"Out[184]=",
+ CellID->347498331,ExpressionUUID->"588675b2-2483-4e32-9342-dfd91af4177d"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"(\[EmptyDownTriangle]1[L])\"", 
+         RowBox[{"{", "\"j\"", "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "\"i\""}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", "1", "0"},
+        {"2", "y", "x"}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"(\[EmptyDownTriangle]1[L])\"", 
+         RowBox[{"{", "\"j\"", "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "\"i\""}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", 
+         RowBox[{"2", " ", "x"}], "0"},
+        {"2", "0", 
+         RowBox[{"-", 
+          FractionBox["1", 
+           SuperscriptBox["y", "2"]]}]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.9159001206039753`*^9, 3.9159001566018095`*^9, 3.9159002360184183`*^9, 
+   3.9159002723488026`*^9, 3.915901335210997*^9, 3.9159014192113113`*^9, {
+   3.915901464884441*^9, 3.915901477793866*^9}, 3.9159017571596675`*^9, 
+   3.9159018175628333`*^9, 3.9159019323781195`*^9, 3.91590201226248*^9, 
+   3.9159023167485843`*^9, 3.915902420944312*^9, 3.91590252116628*^9, 
+   3.9159025724569244`*^9, 3.9159026141844807`*^9, {3.9159027030531864`*^9, 
+   3.9159027297940607`*^9}, 3.9159041594344487`*^9},
+ CellLabel->"Out[188]=",
+ CellID->6992329,ExpressionUUID->"63898c2d-5f5d-418e-b95a-a376003b00ec"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{
+       TemplateBox[{"\"(\[EmptyDownTriangle]2[L])\"", 
+         RowBox[{"{", "\"j\"", "}"}], 
+         RowBox[{"{", 
+           RowBox[{"1", ",", "\"i\""}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", 
+         RowBox[{"1", "-", "x", "-", 
+          FractionBox[
+           SuperscriptBox["x", "2"], "y"]}], 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"2", " ", "x"}], "y"]}]},
+        {"2", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            SuperscriptBox["y", "2"]]}], "+", 
+          FractionBox["x", "y"], "+", "y"}], 
+         RowBox[{"-", "x"}]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]},
+    {
+     TemplateBox[{
+       TemplateBox[{"\"(\[EmptyDownTriangle]2[L])\"", 
+         RowBox[{"{", "\"j\"", "}"}], 
+         RowBox[{"{", 
+           RowBox[{"2", ",", "\"i\""}], "}"}]}, "Subsuperscript", SyntaxForm -> 
+        SubsuperscriptBox], "\":\""},
+      "RowDefault"], 
+     TagBox[GridBox[{
+        {"\<\"i \\\\ j\"\>", "1", "2"},
+        {"1", 
+         RowBox[{
+          RowBox[{"2", " ", "x"}], "-", 
+          FractionBox["1", 
+           SuperscriptBox["y", "2"]], "+", 
+          FractionBox["x", "y"]}], 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"2", " ", 
+            SuperscriptBox["x", "2"]}], "y"]}]},
+        {"2", 
+         RowBox[{"x", "+", 
+          FractionBox[
+           SuperscriptBox["x", "2"], "y"]}], 
+         RowBox[{"-", 
+          FractionBox["3", 
+           SuperscriptBox["y", "2"]]}]}
+       },
+       AutoDelete->False,
+       GridBoxAlignment->{"Columns" -> {{Center}}},
+       GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+      "Grid"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{2}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.9159001206039753`*^9, 3.9159001566018095`*^9, 3.9159002360184183`*^9, 
+   3.9159002723488026`*^9, 3.915901335210997*^9, 3.9159014192113113`*^9, {
+   3.915901464884441*^9, 3.915901477793866*^9}, 3.9159017571596675`*^9, 
+   3.9159018175628333`*^9, 3.9159019323781195`*^9, 3.91590201226248*^9, 
+   3.9159023167485843`*^9, 3.915902420944312*^9, 3.91590252116628*^9, 
+   3.9159025724569244`*^9, 3.9159026141844807`*^9, {3.9159027030531864`*^9, 
+   3.9159027297940607`*^9}, 3.9159041594474125`*^9},
+ CellLabel->"Out[191]=",
+ CellID->116619069,ExpressionUUID->"7ac61d55-d4cd-4cd0-a634-377f016d797f"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 580.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   PanelBox[
+    PaneBox[
+     TagBox[
+      GridBox[{{
+         StyleBox[
+          DynamicBox[
+           FEPrivate`FrontEndResource[
+           "MUnitStrings", "TestingNotebook-Title"], 
+           ImageSizeCache -> {100., {3., 9.}}], StripOnInput -> False, 
+          FontSize -> 12, FontColor -> GrayLevel[0.4]], "\[SpanFromLeft]", 
+         "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+         "\[SpanFromLeft]"}, {
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "New"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "New-Label"], 
+                    ImageSizeCache -> {26., {0., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteInsertTest[
+                  InputNotebook[], "Test"]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource["MUnitStrings", "New-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource["MUnitStrings", "New-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {68., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ConvertSelection"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ConvertSelectiontoTest-Label"], 
+                    ImageSizeCache -> {99., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; 
+                MUnit`buttonConvertCellGroup[
+                  InputNotebook[]]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource[
+              "MUnitStrings", "ConvertSelectiontoTest-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource[
+               "MUnitStrings", "ConvertSelectiontoTest-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {141., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             ButtonBox[
+              PaneBox[
+               TagBox[
+                GridBox[{{
+                   PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "Run"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                   StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "Run-Label"], 
+                    ImageSizeCache -> {22., {0., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                 AutoDelete -> False, 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{0.3}}, "Rows" -> {{Automatic}}}], "Grid"], 
+               ImageMargins -> {{0, 0}, {2, 0}}], Appearance -> 
+              FEPrivate`FrontEndResource[
+               "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+              Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteRun[
+                  InputNotebook[]]], Evaluator -> Automatic, 
+              FrameMargins -> {{10, 10}, {0, 0}}, 
+              ImageSize -> {Automatic, 28}, Method -> "Queued"], 
+             DynamicBox[
+              FEPrivate`FrontEndResource["MUnitStrings", "Run-Tooltip"]], 
+             TooltipDelay -> 0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource["MUnitStrings", "Run-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {63., {11., 17.}}], DynamicModuleValues :> {}], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           ActionMenuBox[
+            ButtonBox[
+             PaneBox[
+              TagBox[
+               GridBox[{{
+                  StyleBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitStrings", "More-Label"], 
+                    ImageSizeCache -> {30., {0., 9.}}], "ButtonText", 
+                   StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]], 
+                  PaneSelectorBox[{True -> DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Arrow-Hover"], 
+                    ImageSizeCache -> {9., {2., 7.}}], False -> DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Arrow-Off"], 
+                    ImageSizeCache -> {9., {2., 7.}}]}, 
+                   Dynamic[$CellContext`hover$$], 
+                   BaselinePosition -> (Center -> Scaled[0.5])]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{0.5}}, "Rows" -> {{Automatic}}}], "Grid"], 
+              ImageMargins -> {{0, 0}, {0, 0}}], Appearance -> 
+             FEPrivate`FrontEndResource[
+              "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> {}, 
+             ContentPadding -> True, Evaluator -> None, 
+             FrameMargins -> {{10, 10}, {0, 0}}, ImageSize -> {Automatic, 28},
+              Method -> "Preemptive"], {TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "AssignTestIDs"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "AssignTestIDs-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteAddTestIDs[
+                 InputNotebook[]]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "SaveAsDotwlt"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "SaveAsDotwlt-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteSaveAs[
+                 InputNotebook[]]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "NewEnvironCell"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "NewEnvironCell-Label"]]}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             Block[{$ContextPath}, Needs["MUnit`"]; MUnit`PaletteInsertTest[
+                 InputNotebook[], "Environ"]], TagBox[
+               GridBox[{{
+                  PaneBox[
+                   DynamicBox[
+                    FEPrivate`FrontEndResource["MUnitExpressions", "Help"]], 
+                   BaselinePosition -> (Center -> Scaled[0.55])], 
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitStrings", "Help-Label"]]}}, AutoDelete -> False, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               "Grid"] :> 
+             SystemOpen["paclet:tutorial/UsingTheTestingFramework"]}, 
+            Appearance -> None, Method -> "Queued"], $CellContext`hover$$ = 
+           CurrentValue["MouseOver"], ImageSizeCache -> {67., {10., 18.}}], 
+          DynamicModuleValues :> {}], 
+         ItemBox["\"\"", ItemSize -> Fit, StripOnInput -> False], 
+         DynamicModuleBox[{$CellContext`hover$$ = False}, 
+          DynamicWrapperBox[
+           TagBox[
+            TooltipBox[
+             PaneSelectorBox[{True -> ButtonBox[
+                 TagBox[
+                  GridBox[{{
+                    PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ClearTestResults-on"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                    StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ClearTestResults-Label"], 
+                    ImageSizeCache -> {96., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, FontColor -> Dynamic[
+                    If[$CellContext`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}}, 
+                   AutoDelete -> False, 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                   GridBoxSpacings -> {
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+                 Appearance -> 
+                 FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`clearTestResults[]], Evaluator -> Automatic, 
+                 FrameMargins -> {{10, 10}, {0, 0}}, 
+                 ImageSize -> {Automatic, 28}, Method -> "Queued"], False -> 
+               ButtonBox[
+                 TagBox[
+                  GridBox[{{
+                    PaneBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ClearTestResults-off"], 
+                    ImageSizeCache -> {15., {5., 10.}}], 
+                    BaselinePosition -> (Center -> Scaled[0.5])], 
+                    StyleBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "ClearTestResults-Label"], 
+                    ImageSizeCache -> {96., {1., 9.}}], "ButtonText", 
+                    StripOnInput -> False, LineColor -> GrayLevel[0.7], 
+                    FrontFaceColor -> GrayLevel[0.7], BackFaceColor -> 
+                    GrayLevel[0.7], GraphicsColor -> GrayLevel[0.7], 
+                    FontColor -> GrayLevel[0.7]]}}, AutoDelete -> False, 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                   GridBoxSpacings -> {
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}], "Grid"], 
+                 Appearance -> 
+                 FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearances"], ButtonFunction :> 
+                 Null, Enabled -> False, Evaluator -> Automatic, 
+                 FrameMargins -> {{10, 10}, {0, 0}}, 
+                 ImageSize -> {Automatic, 28}, Method -> "Queued"]}, 
+              Dynamic[CurrentValue[
+                 ButtonNotebook[], {TaggingRules, "$testsRun"}, False] === 
+               True]], 
+             DynamicBox[
+              FEPrivate`FrontEndResource[
+              "MUnitStrings", "ClearTestResults-Tooltip"]], TooltipDelay -> 
+             0.5], Annotation[#, 
+             Dynamic[
+              RawBoxes[
+               FEPrivate`FrontEndResource[
+               "MUnitStrings", "ClearTestResults-Tooltip"]]], 
+             "Tooltip"]& ], $CellContext`hover$$ = CurrentValue["MouseOver"], 
+           ImageSizeCache -> {138., {10., 18.}}], 
+          DynamicModuleValues :> {}]}}, AutoDelete -> False, 
+       BaseStyle -> {
+        "DialogStyle", Bold, FontColor -> 
+         RGBColor[
+          0.33333333333333337`, 0.33333333333333337`, 0.33333333333333337`]}, 
+       GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Bottom}}}, 
+       GridBoxDividers -> {"Columns" -> {{False}}}, 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+       GridBoxSpacings -> {"Columns" -> {{Automatic}}, "Rows" -> {{1}}}], 
+      "Grid"], ImageMargins -> {{5, 5}, {Automatic, Automatic}}], Appearance -> 
+    FEPrivate`FrontEndResource["MUnitExpressions", "StaticToolbarNinePatch"], 
+    FrameMargins -> {{26, 12}, {8, 12}}, ImageMargins -> -1]], "DockedCell", 
+  CellFrameMargins -> 0, ShowCellTags -> False, CellTags -> 
+  "MUnitStaticToolbar"],
+TaggingRules-><|"$testsRun" -> False, "TryRealOnly" -> False|>,
+Magnification:>1. Inherited,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"ef8b0f60-d3e4-4ed6-a96c-4b9a1cdd86f4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 244, 3, 67, "Section",ExpressionUUID->"f577607c-632b-4da9-8586-ad6697df07a4",
+ CellID->610134407],
+Cell[827, 27, 345, 4, 35, "Text",ExpressionUUID->"cf2d55eb-c065-4285-bc44-b87e5ec13572",
+ CellID->264572665],
+Cell[1175, 33, 739, 12, 62, "Input",ExpressionUUID->"cd3988ed-d2e9-4b75-a727-8cdcccc29b3a",
+ CellID->16144364],
+Cell[1917, 47, 375, 7, 28, "Input",ExpressionUUID->"a45ed280-5a74-490d-9874-05ea590fe1b2",
+ CellID->139226187]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2329, 59, 266, 3, 67, "Section",ExpressionUUID->"91f79e75-6b47-4dc8-b781-8edeacf62212",
+ CellID->690515794],
+Cell[CellGroupData[{
+Cell[2620, 66, 1410, 44, 48, "Input",ExpressionUUID->"4573a930-623d-4605-b6aa-f1d664ca7971",
+ CellID->259521431],
+Cell[4033, 112, 1582, 44, 32, "Output",ExpressionUUID->"be09fb66-c365-441c-be01-3a0f6c30ba20",
+ CellID->1001692811],
+Cell[5618, 158, 1579, 44, 32, "Output",ExpressionUUID->"95fbe0cb-ae59-4c06-ba1b-013d73e4d201",
+ CellID->864127449]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7234, 207, 308, 4, 45, "Subsubsection",ExpressionUUID->"6de59b92-66a3-412a-9f4a-e99722a7866d",
+ CellID->111013305],
+Cell[CellGroupData[{
+Cell[7567, 215, 2105, 65, 241, "Input",ExpressionUUID->"50e7a008-9f3a-4f2e-aab0-5b67cbe27f92",
+ CellID->69344413],
+Cell[9675, 282, 4360, 126, 124, "Output",ExpressionUUID->"da7794f8-120d-498c-8d5a-f93d10c5efc6",
+ CellID->278277369],
+Cell[14038, 410, 3457, 94, 401, "Output",ExpressionUUID->"014a1687-38c3-402a-b1c3-78eb8d672f90",
+ CellID->13056481],
+Cell[17498, 506, 8331, 256, 149, "Output",ExpressionUUID->"9ec04e8e-c6d7-4d86-beb1-e34045aef57e",
+ CellID->590064067],
+Cell[25832, 764, 3407, 92, 401, "Output",ExpressionUUID->"fd789b0d-931d-414f-b452-4fd39ffa6998",
+ CellID->192610142]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29288, 862, 342, 4, 45, "Subsubsection",ExpressionUUID->"15c58c1d-2d59-43c0-8cbc-8b3007dda4e4",
+ CellID->96963342],
+Cell[CellGroupData[{
+Cell[29655, 870, 594, 17, 73, "VerificationTest",ExpressionUUID->"3c12c377-786a-4f0e-9d71-76f7689a2311",
+ CellID->342923698],
+Cell[30252, 889, 151, 2, 38, "ExpectedOutput",ExpressionUUID->"13c71077-b71f-4ee9-b645-3e36dc02ab18",
+ CellID->7605551],
+Cell[30406, 893, 9813, 244, 43, "BottomCell",ExpressionUUID->"a8bf9784-c71a-4423-b51b-e7c9a28301a2",
+ CellID->4689416]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40256, 1142, 740, 22, 89, "VerificationTest",ExpressionUUID->"78b1a9e0-4095-43b8-95b5-67ba29767ac7",
+ CellID->361683162],
+Cell[40999, 1166, 290, 6, 54, "ExpectedOutput",ExpressionUUID->"7aadb491-bb26-40ed-b9dc-11b6480e3e2e",
+ CellID->503997400],
+Cell[41292, 1174, 9814, 244, 43, "BottomCell",ExpressionUUID->"4a80b19d-e935-4cae-944b-3e8cbe35ccc3",
+ CellID->91448044]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51143, 1423, 593, 17, 73, "VerificationTest",ExpressionUUID->"24b53dca-7c95-4c89-8d61-30a17640f7c7",
+ CellID->10330298],
+Cell[51739, 1442, 153, 2, 38, "ExpectedOutput",ExpressionUUID->"11359cae-8c96-4cca-b334-ed3ebcb884c2",
+ CellID->148960539],
+Cell[51895, 1446, 9814, 244, 43, "BottomCell",ExpressionUUID->"29b3d527-c357-4c1e-82bd-f57f7e446e2d",
+ CellID->89451041]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61758, 1696, 299, 3, 45, "Subsubsection",ExpressionUUID->"180b6bce-40c6-44bb-bace-543e64222eaf",
+ CellID->683182173],
+Cell[CellGroupData[{
+Cell[62082, 1703, 318, 7, 62, "Input",ExpressionUUID->"f33dbb22-fc79-4393-b076-bb0284fe8aa8",
+ CellID->212074867],
+Cell[62403, 1712, 59989, 1746, 859, "Output",ExpressionUUID->"533f6c7a-6c71-4acb-af44-35cb71459323",
+ CellID->241714223]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122441, 3464, 208, 2, 45, "Subsubsection",ExpressionUUID->"c6e17fe1-3c55-4d50-a0e2-a37b239e3670",
+ CellID->292939092],
+Cell[CellGroupData[{
+Cell[122674, 3470, 341, 10, 28, "Input",ExpressionUUID->"c5396209-7cf8-483a-bc7d-818b46d0d64f",
+ CellID->654051119],
+Cell[123018, 3482, 585, 13, 32, "Output",ExpressionUUID->"289a6408-5427-4893-9411-21c66bb31593",
+ CellID->433178194]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123640, 3500, 598, 18, 68, "VerificationTest",ExpressionUUID->"73649ef1-1a59-4596-a262-60567bc996b9",
+ CellID->994921187],
+Cell[124241, 3520, 177, 2, 38, "ExpectedOutput",ExpressionUUID->"30638fb1-09d2-423d-be9e-903e10619f0a",
+ CellID->438540990],
+Cell[124421, 3524, 9815, 244, 43, "BottomCell",ExpressionUUID->"f2835cda-cdfd-4d83-bafd-99ab5f02a17c",
+ CellID->249947121]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134273, 3773, 256, 4, 43, "Input",ExpressionUUID->"a3bdf149-678c-4d81-9aac-e80cffc17377",
+ CellID->42744346],
+Cell[134532, 3779, 495, 10, 32, "Output",ExpressionUUID->"59fd8ad2-c912-42ef-a485-c2e96d884f1d",
+ CellID->166565415]
+}, Open  ]]
+}, Open  ]],
+Cell[135054, 3793, 166, 2, 45, "Subsubsection",ExpressionUUID->"de15b1c9-a026-49eb-a926-87adb36bf51e",
+ CellID->2587333]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[135257, 3800, 338, 4, 67, "Section",ExpressionUUID->"752fdd3f-5098-4ab1-9e2f-74dfb2a65726",
+ CellID->176304986],
+Cell[CellGroupData[{
+Cell[135620, 3808, 232, 4, 28, "Input",ExpressionUUID->"08f2569b-0649-40d3-b809-c401faed4fd5",
+ CellID->81803095],
+Cell[135855, 3814, 3285, 91, 401, "Output",ExpressionUUID->"416f3069-0af8-4a2e-a5ed-fd92aa9644ae",
+ CellID->88801226]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[139177, 3910, 906, 24, 108, "Input",ExpressionUUID->"c3bd1017-c4e9-444d-8a3e-2cca2aae48b3",
+ CellID->43986366],
+Cell[140086, 3936, 1148, 36, 51, "Output",ExpressionUUID->"48cf2c43-9d4a-4bf3-97a1-0630d4eec24e",
+ CellID->714541527]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[141271, 3977, 835, 20, 84, "Input",ExpressionUUID->"68faf10c-f311-4b9e-96a4-1af3f8b60edd",
+ CellID->216482628],
+Cell[142109, 3999, 868, 24, 32, "Output",ExpressionUUID->"61f132fd-b4f2-462c-a8d4-11b6f1b5c90d",
+ CellID->721088919]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[143014, 4028, 1024, 27, 146, "Input",ExpressionUUID->"1ce681dc-1199-4e5f-bd7b-004c5d88535f",
+ CellID->28629463],
+Cell[144041, 4057, 1071, 34, 51, "Output",ExpressionUUID->"10accb0a-a90c-482f-9207-5ab05b1a56c2",
+ CellID->209738569]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[145149, 4096, 3235, 90, 407, "Input",ExpressionUUID->"3e6a0adc-fc5c-4c6f-beda-6322226aa9c7",
+ CellID->22716878],
+Cell[148387, 4188, 1600, 38, 105, "Output",ExpressionUUID->"588675b2-2483-4e32-9342-dfd91af4177d",
+ CellID->347498331],
+Cell[149990, 4228, 2363, 58, 208, "Output",ExpressionUUID->"63898c2d-5f5d-418e-b95a-a376003b00ec",
+ CellID->6992329],
+Cell[152356, 4288, 3081, 81, 250, "Output",ExpressionUUID->"7ac61d55-d4cd-4cd0-a634-377f016d797f",
+ CellID->116619069]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
